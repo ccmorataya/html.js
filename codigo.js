@@ -1,5 +1,5 @@
 var peso;
 
-peso = prompt("Cual es tu edad");
+peso = prompt("Cual es tu peso", 70);
 
-alert (peso+ " años");
+alert ( parseInt(peso) + 10);
