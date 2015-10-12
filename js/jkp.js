@@ -9,15 +9,15 @@ opcionUsuario = prompt("¿Qué eliges?\nPiedra: 0\nPapel: 1\nTijera: 2", 0);
 
 //alert ("Elegiste " + opcionUsuario);
 
-if (opcionUsuario == 0)
+if (opcionUsuario == piedra)
 {
     alert("Elegiste piedra");
 }
-else if (opcionUsuario == 1)
+else if (opcionUsuario == papel)
 {
     alert("Elegiste papel");
 }
-else if (opcionUsuario == 2)
+else if (opcionUsuario == tijera)
 {
     alert("Elegiste tijera");
 }
