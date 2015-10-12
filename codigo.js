@@ -1,1 +1,5 @@
-alert("10" + 1);
+var peso;
+
+peso = prompt("Cual es tu edad");
+
+alert (peso+ " años");
