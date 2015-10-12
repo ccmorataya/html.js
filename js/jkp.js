@@ -3,64 +3,31 @@ var papel = 1;
 var tijera = 2;
 
 var opcionUsuario;
-var opcionMaquina = papel;
+var opcionMaquina = piedra;
 
 opcionUsuario = prompt("¿Qué eliges?\nPiedra: 0\nPapel: 1\nTijera: 2", 0);
 
-//alert ("Elegiste " + opcionUsuario);
 
-if (opcionUsuario == piedra)
-{
-    alert("Elegiste piedra");
-
-    if (opcionMaquina == piedra)
+    if (opcionUsuario == opcionMaquina)
     {
         alert("Empate");
     }
-    else if (opcionMaquina == papel)
+    else if(opcionUsuario != opcionMaquina)
     {
-        alert("Perdiste");
+        if (opcionUsuario == piedra && opcionMaquina == papel ||
+                opcionUsuario == papel && opcionMaquina == tijera ||
+                opcionUsuario == tijera && opcionMaquina == piedra)
+        {
+            alert("Perdiste");
+        }
+        else if (opcionUsuario == piedra && opcionMaquina == tijera ||
+                opcionUsuario == papel && opcionMaquina == piedra ||
+                opcionUsuario == tijera && opcionMaquina == papel) 
+        {
+            alert("Ganaste");
+        }
+        else
+        {
+            alert("No elegiste ni piedra, ni papel, ni tijera intenta de nuevo");
+        }
     }
-    else if (opcionMaquina == tijera)
-    {
-        alert("Ganaste");
-    }
-}
-else if (opcionUsuario == papel)
-{
-    alert("Elegiste papel");
-
-    if (opcionMaquina == piedra)
-    {
-        alert("Ganaste");
-    }
-    else if (opcionMaquina == papel)
-    {
-        alert("Empate");
-    }
-    else if (opcionMaquina == tijera)
-    {
-        alert("Perdiste");
-    }
-}
-else if (opcionUsuario == tijera)
-{
-    alert("Elegiste tijera");
-
-    if (opcionMaquina == piedra)
-    {
-        alert("Perdiste");
-    }
-    else if (opcionMaquina == papel)
-    {
-        alert("Ganaste");
-    }
-    else if (opcionMaquina == tijera)
-    {
-        alert("Empate");
-    }
-}
-else
-{
-    alert("No elegiste opción");
-}
