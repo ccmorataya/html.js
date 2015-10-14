@@ -1,15 +1,22 @@
+
+function aleatorio(min, max)
+{
+    numero = Math.floor(Math.random() * (max - min +1) + min);
+    return numero;
+}
+
 var piedra = 0;
 var papel = 1;
 var tijera = 2;
 var opciones = ["Piedra", "Papel", "Tijera"];
 
-alert ( opciones[2] );
-
 var opcionUsuario;
-var opcionMaquina = piedra;
+var opcionMaquina = aleatorio(0, 2);
 
 opcionUsuario = prompt("¿Qué eliges?\nPiedra: 0\nPapel: 1\nTijera: 2", 0);
 
+alert("Elegiste " + opciones[opcionUsuario]);
+alert("JanKenPon.JS eligió " + opciones[opcionMaquina]);
 
     if (opcionUsuario == opcionMaquina)
     {
